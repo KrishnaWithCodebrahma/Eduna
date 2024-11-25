@@ -14,7 +14,7 @@ const MotionDiv = dynamic(
     { ssr: false }
 );
 
-const page = () => {
+const Testominal = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
         threshold: 0.5,
@@ -94,7 +94,7 @@ const page = () => {
     )
 }
 
-export default page
+export default Testominal
 
 
 // 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

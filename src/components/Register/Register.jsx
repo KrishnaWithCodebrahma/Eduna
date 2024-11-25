@@ -1,15 +1,17 @@
-"use client";
-import * as React from 'react';
+"use client"
 import Dialog from '@mui/material/Dialog';
 import { IconButton, TextField } from '@mui/material';
 import CloseIcon from "@mui/icons-material/Close";
+// import Link from 'next/link';
 import CustomButton from '@/components/common/CustomButton';
 import UseInLoginSignup from '@/components/common/UseInLoginSignup';
 import Checkboxes from '@/components/common/Checkboxes';
-import { motion, AnimatePresence } from 'framer-motion';
+// import motion from "framer-motion"
 
 
-export default function Page({ open, setOpen, handleRegister }) {
+
+export default function Register({ open, setOpen, handleLogin }) {
+
     const handleClose = () => {
         setOpen(false);
     };
@@ -17,10 +19,9 @@ export default function Page({ open, setOpen, handleRegister }) {
     const closeSidebar = () => {
         setOpen(false);
     };
-
     return (
         <>
-            <div >
+            <div>
                 <Dialog
                     open={open}
                     onClose={handleClose}
@@ -29,7 +30,7 @@ export default function Page({ open, setOpen, handleRegister }) {
                         sx: {
                             width: {
                                 lg: "50%",
-                                md: "70%",
+                                md:"70%",
                                 sm: "85%",
                                 xs: "95%"
                             },
@@ -43,24 +44,28 @@ export default function Page({ open, setOpen, handleRegister }) {
                         }
                     }}
                 >
-                    <div className="px-[0px] md:p-[20px] pt-[20px] flex items-end justify-end" >
+                    <div className='px-[0px] md:p-[20px] pt-[20px] flex items-end justify-end'>
                         <IconButton onClick={closeSidebar} style={{ backgroundColor: "#d73b3b", color: "white", fontSize: "16px", width: "40px", height: "40px", borderRadius: "50%", }}>
                             <CloseIcon style={{ fontSize: "20px" }} />
                         </IconButton>
                     </div>
-                    <div className='lg:px-[75px] px-[20px]'>
-                        <div className="text-center">
-                            <div className="flex items-center justify-center">
-                                <img src="/images/logo.svg" className="w-[116px] h-[28px] sm:w-[96px] sm:h-[24px] xs:w-[80px] xs:h-[20px]" alt="Logo" />
+                    <div className='lg:px-[75px] px-[20px] '>
+                        <div className='text-center'>
+                            <div className='flex items-center justify-center'>
+                                <img src='/images/logo.svg' className='w-[116px] h-[28px]' />
                             </div>
-                            <p className='my-3 text-7xl' style={{ lineHeight: "42px", fontSize: "36px", letterSpacing: "-0.36px", fontWeight: 900 }}><strong>Sign In</strong></p>
-                            <p className="text-sm sm:text-base">
-                                Didn't create an account? <span className="text-violet cursor-pointer" onClick={handleRegister}>Sign Up</span>
-                            </p>
+                            <p className='my-3 ' style={{ lineHeight: "42px", fontSize: "36px", letterSpacing: "-0.36px", fontWeight: 700 }}><strong>Sign Up</strong></p>
+                            <p>Already have an account? <span className='text-violet cursor-pointer' onClick={handleLogin}>Sign In</span></p>
                         </div>
                         <div className='my-4'>
                             <div className='py-2'>
+                                <TextField id="filled-basic" label="Enter Name" variant="outlined" className='w-full ' />
+                            </div>
+                            <div className='py-2'>
                                 <TextField id="filled-basic" label="Enter Username" variant="outlined" className='w-full ' />
+                            </div>
+                            <div className='py-2'>
+                                <TextField id="filled-basic" label="Enter Email" variant="outlined" className='w-full ' />
                             </div>
                             <div className='py-2'>
                                 <TextField id="filled-basic" label="Enter Password" variant="outlined" className='w-full ' />
@@ -68,7 +73,7 @@ export default function Page({ open, setOpen, handleRegister }) {
                         </div>
                         <Checkboxes />
                         <CustomButton
-                            buttonText="Sign In"
+                            buttonText="Register Now"
                             buttonBgColor="#543ee8"
                             iconBgColor="#ffffff"
                             textColor="#ffffff"

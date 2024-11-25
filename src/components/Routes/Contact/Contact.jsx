@@ -5,10 +5,10 @@ import { motion } from 'framer-motion';
 import { FaArrowRight } from 'react-icons/fa';
 import ScrollToTop from 'react-scroll-to-top';
 import CustomButton from '@/components/common/CustomButton';
-import Navbar from "@/components/Navbar/Page";
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 
-const page = () => {
+const Contact = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -218,4 +218,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Contact

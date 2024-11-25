@@ -1,5 +1,5 @@
 import React from 'react'
-import News from "@/components/Routes/News/page"
+import News from "@/components/Routes/News/News"
 
 const page = () => {
   return (

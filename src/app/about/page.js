@@ -1,5 +1,5 @@
 import React from 'react';
-import About from "@/components/Routes/About/page"
+import About from "@/components/Routes/About/About"
 
 const page = () => {
   return (

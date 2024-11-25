@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Navbar from "@/components/Navbar/page";
+import Navbar from "@/components/Navbar/Page";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 import Hero from "@/components/Hero/page";
 import Hero2 from "@/components/Hero2/page";

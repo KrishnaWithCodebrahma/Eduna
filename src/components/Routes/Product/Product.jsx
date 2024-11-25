@@ -5,9 +5,9 @@ import { motion } from "framer-motion"
 import { FaCartShopping } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
 import ScrollToTop from 'react-scroll-to-top';
-import GetStartedSection from "@/components/GetStartedSection/page"
+import GetStartedSection from "@/components/GetStartedSection/GetStartedSection"
 import { Pagination, Stack } from '@mui/material';
-import Navbar from "@/components/Navbar/Page";
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 
 
@@ -60,7 +60,7 @@ const products = [
     },
 ];
 
-const page = () => {
+const Product = () => {
     const [loading, setLoading] = useState(true)
     useEffect(() => {
         const handleLoad = () => {
@@ -149,4 +149,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Product

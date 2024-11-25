@@ -5,16 +5,17 @@ import { FaFacebookF, FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { FaDribbble } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
-import Nav_First_Sidebar from "@/components/First_Sidebar/page";
+import Nav_First_Sidebar from "@/components/First_Sidebar/First_Sidebar";
 import Link from 'next/link';
-import Register from "@/components/Register/page"
-// import Login from "@/components/Login/Page"
+// import Register from "@/components/Register/page"
+import Register from "@/components/Register/Register"
+// import Login from "@/components/Login/page"
 import Login from "@/components/Login/Login"
 
 
 
 
-const Page = () => {
+const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isRegisterOpen, setIsRegisterOpen] = useState(false)
     const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -68,4 +69,4 @@ const Page = () => {
     )
 }
 
-export default Page
+export default Navbar

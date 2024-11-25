@@ -6,10 +6,10 @@ import CloseIcon from "@mui/icons-material/Close";
 import CustomButton from '@/components/common/CustomButton';
 import UseInLoginSignup from '@/components/common/UseInLoginSignup';
 import Checkboxes from '@/components/common/Checkboxes';
-import { motion, AnimatePresence } from 'framer-motion';
+// import { motion, AnimatePresence } from 'framer-motion';
 
 
-export default function Page({ open, setOpen, handleRegister }) {
+export default function Login({ open, setOpen, handleRegister }) {
     const handleClose = () => {
         setOpen(false);
     };

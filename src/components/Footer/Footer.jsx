@@ -16,7 +16,7 @@ const innerStyle = {
     fontSize: "16px",
     marginBottom: "28px",
 }
-const page = () => {
+const Footer = () => {
     return (
         <section className='bg-[#f5f5f5] relative'>
             <div className='absolute md:hidden lg:block xl:block top-[450px] lg:bottom-[100px] xl:top-[400px] right-0'>
@@ -117,7 +117,7 @@ const page = () => {
     )
 }
 
-export default page
+export default Footer
 
 
 // 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

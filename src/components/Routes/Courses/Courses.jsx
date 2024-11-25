@@ -5,11 +5,11 @@ import { IoIosSearch } from 'react-icons/io';
 import GetStartedSection from "@/components/GetStartedSection/page";
 import { Pagination, Stack } from '@mui/material';
 import CourseList from './CourseList';
-import Navbar from "@/components/Navbar/Page";
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 
 
-const page = () => {
+const Courses = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -80,4 +80,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Courses;

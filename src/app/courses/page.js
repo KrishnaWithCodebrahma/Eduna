@@ -1,5 +1,5 @@
 import React from 'react';
-import Courses from "@/components/Routes/Courses/page"
+import Courses from "@/components/Routes/Courses/Courses"
 
 const page = () => {
   return (

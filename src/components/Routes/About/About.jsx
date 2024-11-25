@@ -9,11 +9,11 @@ import ScrollToTop from "react-scroll-to-top";
 import { GiBlackBook } from 'react-icons/gi'
 import { FaRegBookmark, FaStar, FaUser } from 'react-icons/fa'
 import { PiGraduationCapThin } from 'react-icons/pi'
-import Navbar from "@/components/Navbar/Page";
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 
 
-const page = () => {
+const About = () => {
     const [loading, setLoading] = useState(true)
 
     const images = [
@@ -373,4 +373,4 @@ const page = () => {
     )
 }
 
-export default page
+export default About

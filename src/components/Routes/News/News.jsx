@@ -5,11 +5,11 @@ import ScrollToTop from 'react-scroll-to-top';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
 import NewsGrid from './NewsGrid';
-import GetStartedSection from "@/components/GetStartedSection/page"
-import Navbar from "@/components/Navbar/Page";
+import GetStartedSection from "@/components/GetStartedSection/GetStartedSection"
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
 
-const page = () => {
+const News = () => {
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(true)
 
@@ -69,4 +69,4 @@ const page = () => {
     )
 }
 
-export default page
+export default News
