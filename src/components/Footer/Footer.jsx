@@ -94,7 +94,7 @@ const Footer = () => {
                             <input placeholder='Enter  Email' className='mb-5' style={{ width: "100%", borderRadius: "52px", padding: "14px  28px", fontSize: "14px", border: "1px solid #ebebeb" }} />
 
                             <CustomButton
-                                url='/'
+                                url="/"
                                 buttonText="Subscribe Now"
                                 buttonBgColor="#543ee8"
                                 iconBgColor="#ffffff"
@@ -111,7 +111,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className='py-6 bg-slate-200'>
-                <p className='text-center font-semibold '> Copyright 2024 Eduna | Developed By  <Link href='https://codebrahma.in'>CodeBrahma</Link> All Rights Reserved </p>
+                <p className='text-center font-semibold'> Copyright 2024 Eduna | Developed By <span> <Link href='https://codebrahma.in'>CodeBrahma</Link> </span>  All Rights Reserved </p>
             </div>
         </section>
     )
