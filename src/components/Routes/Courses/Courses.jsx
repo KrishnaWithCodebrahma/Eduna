@@ -1,8 +1,8 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import Footer from "@/components/Footer/page";
+import Footer from "@/components/Footer/Footer";
 import { IoIosSearch } from 'react-icons/io';
-import GetStartedSection from "@/components/GetStartedSection/page";
+import GetStartedSection from "@/components/GetStartedSection/GetStartedSection";
 import { Pagination, Stack } from '@mui/material';
 import CourseList from './CourseList';
 import Navbar from "@/components/Navbar/Navbar";

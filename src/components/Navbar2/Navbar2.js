@@ -1,8 +1,8 @@
 "use client"
 import React, { useState } from 'react';
 import { RiArrowDropDownLine } from "react-icons/ri";
-import Second_Navbar from "@/components/Second_Sidebar/page";
-import Third_Navbar from "@/components/Third_Navbar/page";
+import Second_Sidebar from "@/components/Second_Sidebar/Second_Sidebar";
+import Third_Navbar from "@/components/Third_Navbar/Third_Navbar";
 import { motion } from "framer-motion";
 import Link from 'next/link';
 import Badge from '@mui/material/Badge';
@@ -234,7 +234,7 @@ const Navbar2 = () => {
                     </div>
                 </div>
             </div>
-            {isOpen && <Second_Navbar isOpen={isOpen} setIsOpen={setIsOpen} />}
+            {isOpen && <Second_Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />}
             {isOpen2 && <Third_Navbar isOpen={isOpen2} setIsOpen={setIsOpen2} />}
         </section>
     );

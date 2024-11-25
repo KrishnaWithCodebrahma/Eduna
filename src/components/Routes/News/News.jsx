@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import Footer from "@/components/Footer/page";
+import Footer from "@/components/Footer/Footer";
 import ScrollToTop from 'react-scroll-to-top';
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';

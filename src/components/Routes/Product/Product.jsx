@@ -1,6 +1,6 @@
 "use client"
 import React, { useEffect, useState } from 'react';
-import Footer from "@/components/Footer/page";
+import Footer from "@/components/Footer/Footer";
 import { motion } from "framer-motion"
 import { FaCartShopping } from "react-icons/fa6";
 import { FaStar } from "react-icons/fa6";
