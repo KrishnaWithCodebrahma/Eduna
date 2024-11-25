@@ -1,15 +1,15 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Navbar from "@/components/Navbar/Page";
+import Navbar from "@/components/Navbar/Navbar";
 import Navbar2 from "@/components/Navbar2/Navbar2";
-import Hero from "@/components/Hero/page";
-import Hero2 from "@/components/Hero2/page";
-import Courses from "@/components/Courses/page";
-import WhyUs from "@/components/WhyUs/page";
-import Testominal from "@/components/Testominal/page";
-import News from "@/components/News/page";
-import Footer from "@/components/Footer/page";
+import Hero from "@/components/Hero/Hero";
+import Hero2 from "@/components/Hero2/Hero2";
+import Courses from "@/components/Courses/Courses";
+import WhyUs from "@/components/WhyUs/WhyUs";
+import Testominal from "@/components/Testominal/Testominal";
+import News from "@/components/News/News";
+import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
 // import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 
