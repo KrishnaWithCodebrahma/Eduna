@@ -55,7 +55,7 @@ export default function Login({ open, setOpen, handleRegister }) {
                             </div>
                             <p className='my-3 text-7xl' style={{ lineHeight: "42px", fontSize: "36px", letterSpacing: "-0.36px", fontWeight: 900 }}><strong>Sign In</strong></p>
                             <p className="text-sm sm:text-base">
-                                Didn't create an account? <span className="text-violet cursor-pointer" onClick={handleRegister}>Sign Up</span>
+                                Didn&apos;t create an account? <span className="text-violet cursor-pointer" onClick={handleRegister}>Sign Up</span>
                             </p>
                         </div>
                         <div className='my-4'>
