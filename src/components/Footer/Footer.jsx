@@ -56,7 +56,7 @@ const Footer = () => {
                             <a style={innerStyle} className='text-gray'>Pricing Plan</a>
                             <a style={innerStyle} className='text-gray'>Contact Us</a>
                             <a style={innerStyle} className='text-gray'>Our News</a>
-                            <a style={innerStyle} className='text-gray'>FAQ's</a>
+                            <a style={innerStyle} className='text-gray'>FAQ&apos;s</a>
                         </div>
                     </div>
                     <div>
