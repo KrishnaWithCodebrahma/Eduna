@@ -62,6 +62,7 @@ const products = [
 
 const Product = () => {
     const [loading, setLoading] = useState(true)
+    const [isNavbarFixed, setIsNavbarFixed] = useState(false);
     useEffect(() => {
         const handleLoad = () => {
             setLoading(false);
@@ -69,6 +70,21 @@ const Product = () => {
         window.onload = handleLoad;
         const timeout = setTimeout(() => setLoading(false), 1000);
         return () => clearTimeout(timeout);
+    }, []);
+    useEffect(() => {
+        // Handle scroll events to toggle Navbar2's fixed position
+        const handleScroll = () => {
+            if (window.scrollY > 170) {
+                setIsNavbarFixed(true);
+            } else {
+                setIsNavbarFixed(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
     if (loading) {
         return (
@@ -83,7 +99,12 @@ const Product = () => {
     return (
         <div className=' overflow-x-hidden'>
             <Navbar />
-            <Navbar2 />
+            <div
+                className={`${isNavbarFixed ? "fixed top-0 left-0 w-full z-20  drop-shadow-xl bg-white" : ""
+                    }`}
+            >
+                <Navbar2 />
+            </div>
             <div className='pt-[90px] pb-[90px] ' style={{ backgroundImage: "url('/images/breadcrumbs-bg.png')" }}>
                 <h3 className=' text-center' style={{ fontSize: "36px", marginBottom: "24px", lineHeight: "30px" }}>Our Product</h3>
                 <p className=' text-center'><span className='text-red'>HOME</span> <span className='text-[#5d5f5f]'> / OUR PRODUCTS</span></p>

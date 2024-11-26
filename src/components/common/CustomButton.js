@@ -3,6 +3,7 @@ import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 
 const CustomButton = ({
+    onClick = () => { },
     url = "/",
     buttonText = 'Start Learning Today',
     buttonBgColor = '#ffcd20',
@@ -37,8 +38,8 @@ const CustomButton = ({
     };
 
     return (
-        <Link href={url}>
-            <button style={buttonStyle} className="flex gap-[24px] items-center rounded-full"
+        <Link href={url} className='cursor-pointer'>
+            <button style={buttonStyle} className="flex gap-[24px] items-center rounded-full "
                 onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = hoverBgColor;
                 }}

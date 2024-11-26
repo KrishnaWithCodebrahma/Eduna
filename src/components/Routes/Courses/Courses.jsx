@@ -11,6 +11,7 @@ import Navbar2 from "@/components/Navbar2/Navbar2";
 
 const Courses = () => {
     const [loading, setLoading] = useState(true);
+    const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
     useEffect(() => {
         const handleLoad = () => {
@@ -22,6 +23,22 @@ const Courses = () => {
         const timeout = setTimeout(() => setLoading(false), 1000);
 
         return () => clearTimeout(timeout);
+    }, []);
+
+    useEffect(() => {
+        // Handle scroll events to toggle Navbar2's fixed position
+        const handleScroll = () => {
+            if (window.scrollY > 170) {
+                setIsNavbarFixed(true);
+            } else {
+                setIsNavbarFixed(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Cleanup event listener
+        return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     if (loading) {
@@ -39,7 +56,12 @@ const Courses = () => {
         <>
             <div className="overflow-x-hidden">
                 <Navbar />
-                <Navbar2 />
+                <div
+                    className={`${isNavbarFixed ? "fixed top-0 left-0 w-full z-20  drop-shadow-xl bg-white" : ""
+                        }`}
+                >
+                    <Navbar2 />
+                </div>
                 <div className="pt-[50px] pb-[20px] lg:pb-[60px]" style={{ backgroundImage: "url('/images/breadcrumbs-bg.png')" }}>
                     <h3 className="text-center" style={{ fontSize: "36px", marginBottom: "24px", lineHeight: "30px" }}>Our Courses</h3>
                     <p className="text-center">

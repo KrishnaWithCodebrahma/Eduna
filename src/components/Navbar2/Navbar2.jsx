@@ -50,7 +50,7 @@ const Navbar2 = () => {
                                 onMouseEnter={() => setIsOpenHome(true)}
                                 onMouseLeave={() => setIsOpenHome(false)}
                             >
-                                <span className='hover:text-violet py-4 '>Homee</span>
+                                <span className='hover:text-violet py-4 '>Home</span>
                                 <RiArrowDropDownLine className='text-2xl hover:text-violet' />
                                 {isOpenHome && (
                                     <motion.ul
@@ -153,11 +153,11 @@ const Navbar2 = () => {
                                         style={{ overflow: 'hidden' }}
                                     >
                                         <li className='sub-nav-link'>
-                                            <Link href="/about">Our Story</Link>
+                                            <Link href="/products">Our Story</Link>
                                         </li>
                                         <hr className='w-[80%] mx-auto ' />
                                         <li className='sub-nav-link'>
-                                            <Link href="/about">Our Team</Link>
+                                            <Link href="/products">Our Team</Link>
                                         </li>
                                     </motion.ul>
                                 )}
@@ -180,15 +180,15 @@ const Navbar2 = () => {
                                         style={{ overflow: 'hidden' }}
                                     >
                                         <li className='sub-nav-link'>
-                                            <Link href="/about">Page 1</Link>
+                                            <Link href="/products">Page 1</Link>
                                         </li>
                                         <hr className='w-[80%] mx-auto ' />
                                         <li className='sub-nav-link'>
-                                            <Link href="/about">Page 2</Link>
+                                            <Link href="/products">Page 2</Link>
                                         </li>
                                         <hr className='w-[80%] mx-auto ' />
                                         <li className='sub-nav-link'>
-                                            <Link href="/about">Page 3</Link>
+                                            <Link href="/products">Page 3</Link>
                                         </li>
                                         <hr className='w-[80%] mx-auto ' />
                                     </motion.ul>

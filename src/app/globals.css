@@ -5,10 +5,10 @@
 @tailwind utilities;
 
 
-.medium-header {
-  @apply text-[20px] leading-[23px] mb-[44px] font-bold ;
+.medium-header{
+  @apply text-[20px]  mb-[44px] font-bold ;
 }
-.sub-nav-link {
+.sub-nav-link{
   @apply  space-y-1   p-[25px] hover:text-violet w-40 cursor-pointer pl-5 pr-10 pt-2
 }
 .nav-link {

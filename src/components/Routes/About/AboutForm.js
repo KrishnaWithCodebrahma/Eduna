@@ -93,6 +93,7 @@ const AboutForm = () => {
                                 textTracking="normal"
                                 paddingX="20px"
                                 paddingY="5px"
+                                hoverBgColor="#000000"
                             />
                         </div>
                     </div>

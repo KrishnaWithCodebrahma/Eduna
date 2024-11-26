@@ -11,23 +11,40 @@ import Testominal from "@/components/Testominal/Testominal";
 import News from "@/components/News/News";
 import Footer from "@/components/Footer/Footer";
 import ScrollToTop from "react-scroll-to-top";
-// import ScrollToTopButton from "@/components/common/ScrollToTopButton";
 
 export default function Home() {
-
   const [loading, setLoading] = useState(true);
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
 
   useEffect(() => {
+    // Handle page loading state
     const handleLoad = () => {
       setLoading(false);
     };
-
     window.onload = handleLoad;
 
     const timeout = setTimeout(() => setLoading(false), 1000);
 
+    // Cleanup timeout
     return () => clearTimeout(timeout);
   }, []);
+
+  useEffect(() => {
+    // Handle scroll events to toggle Navbar2's fixed position
+    const handleScroll = () => {
+      if (window.scrollY > 170) {
+        setIsNavbarFixed(true);
+      } else {
+        setIsNavbarFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Cleanup event listener
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -40,9 +57,16 @@ export default function Home() {
   }
 
   return (
-    <div className="overflow-x-hidden select-none ">
+    <div className="overflow-x-hidden">
       <Navbar />
-      <Navbar2 />
+      
+      <div
+        className={`${
+          isNavbarFixed ? "fixed top-0 left-0 w-full z-20  drop-shadow-xl bg-white" : ""
+        }`}
+      >
+        <Navbar2 />
+      </div>
       <Hero />
       <Hero2 />
       <Courses />
@@ -61,7 +85,6 @@ export default function Home() {
             </div>
           }
         />
-        {/* <ScrollToTopButton /> */}
       </div>
     </div>
   );

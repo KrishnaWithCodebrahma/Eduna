@@ -11,7 +11,7 @@ const Hero = () => {
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             height: '100%',
-        }} className=' pt-[4px] px-5  xl:h-[600px] select-none '>
+        }} className=' pt-[4px] px-5  xl:h-[600px]  '>
             <div className='grid grid-cols-1 lg:grid-cols-2 '>
                 <div className='p-[10px] pb-[120px] lg:pb-0 pt-[50px] font-aeonik'>
                     <motion.h2
